@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue</title>
+</head>
+<body>
+	<input type="text" value="io" v-model="ss">
+	{{ss}}
+	<br />
+	{{ss}}
+
+	<script>
+
+	var vueArr = {};
+	var bbb = {};
+	bbb.ss = [];
+	vueArr.ss = "";
+		function Observer(key){
+			Object.defineProperty(vueArr, key, {
+				configurable: false,
+				enumerable: true,
+				get: function(){
+					console.log("取值操作");
+					return key;
+				},
+				set: function(newVal){
+					console.log("赋值操作 : " + newVal);
+					for(var i = 0; i<bbb.ss.length; i++){
+						if(bbb.ss[i].nodeType == 3){
+							bbb.ss[i].textContent = newVal;
+						}
+						console.log(bbb.ss[i]);
+						if(bbb.ss[i].nodeType == 1){
+							bbb.ss[i].value = newVal;
+						}
+					}
+				}
+			});
+		}
+
+		var a = {};
+
+		var q = document.querySelector("html");
+
+		console.log(q.childNodes);
+
+		function s(obj){
+			for(var i in obj.childNodes){
+				// console.log(obj.childNodes[i].length);
+				if(obj.childNodes[i].nodeType){
+					if(obj.childNodes[i].childNodes.length){
+						s(obj.childNodes[i]);
+					}else{
+						if(obj.childNodes[i].nodeType == 1){
+							// 元素节点
+							// obj.childNodes[i].attributes
+							for(var j in obj.childNodes[i].attributes){
+								// obj.childNodes[i].attributes[j]
+								// console.log(obj.childNodes[i].attributes[j].getAttribute("v-model"));
+								if(obj.childNodes[i].attributes[j].localName == "v-model"){
+									// console.log("-----"+obj.childNodes[i].attributes[j].nodeValue);
+									if (obj.childNodes[i].attributes[j].nodeValue == "ss") {
+										// console.log(obj.childNodes[i].value);
+										Observer(vueArr.ss);
+										bbb.ss.push(obj.childNodes[i]);
+										vueArr.ss = obj.childNodes[i].value;
+
+										vueArr.ss = "ioio";
+									};
+								}
+							}
+						}
+						if(obj.childNodes[i].nodeType == 3){
+							// console.log(obj.childNodes[i].textContent);
+							var patter = /{{.*}}/g;
+							console.log(obj.childNodes[i].textContent.match(patter));
+							bbb.ss.push(obj.childNodes[i]);
+							obj.childNodes[i].textContent = vueArr.ss;
+						}
+					}
+				}
+			}
+		}
+
+		s(q.childNodes[2]);
+		vueArr.ss = "ioio";
+
+		// console.log(bbb);
+
+	</script>
+</body>
+</html>
