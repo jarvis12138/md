@@ -182,7 +182,36 @@ offsetLeft 指的是一个元素最近的父级定位元素，如果没有定位
                         win.document.body[ method ] :
                     elem[ method ];
 ```
+```
+IE6/7/8：
+doctype：
+window.pageYOffset：undefined
+document.documentElement.scrollTop:100
+document.body.scrollTop：0
+无doctype：
+window.pageYOffset：undefined
+document.documentElement.scrollTop:0
+document.body.scrollTop：100
+Safari/Chrome:
+window.pageYOffset：100
+document.documentElement.scrollTop:0
+document.body.scrollTop：100
 
+Firefox/Opera:
+
+doctype：
+window.pageYOffset：100
+document.documentElement.scrollTop:100
+document.body.scrollTop：0
+
+无doctype：
+window.pageYOffset：100
+document.documentElement.scrollTop:0
+document.body.scrollTop：100
+
+获取scrollTop 赋值简写 ：var scrollTop = window.pageYOffset|| document.documentElement.scrollTop || document.body.scrollTop;
+
+```
 
 
 
