@@ -213,6 +213,91 @@ document.body.scrollTop：100
 
 ```
 
+### offsetTop,scrollTop,clientTop区别
+
+```
+1.offsetTop     :
+
+当前对象到其上级层顶部的距离.
+
+不能对其进行赋值.设置对象到页面顶部的距离请用style.top属性.
+
+2.offsetLeft : <父级的padding+本级的margin>
+
+当前对象到其上级层左边的距离.
+
+不能对其进行赋值.设置对象到页面左部的距离请用style.left属性.
+
+3.offsetWidth :<width+左右border+左右padding>
+
+当前对象的宽度.
+
+与style.width属性的区别在于:如对象的宽度设定值为百分比宽度,则无论页面变大还是变小,style.width都返回此百分比,而offsetWidth则返回在不同页面中对象的宽度值而不是百分比值
+
+4.offsetHeight :
+
+当前对象的高度。
+
+与style.height属性的区别在于:如对象的宽度设定值为百分比高度,则无论页面变大还是变小,style.height都返回此百分比,而offsetHeight则返回在不同页面中对象的高度值而不是百分比值
+
+5.offsetParent :
+
+当前对象的上级层对象.
+
+注意.如果对象是包括在一个DIV中时,此DIV不会被当做是此对象的上级层,(即对象的上级层会跳过DIV对象)上级层是Table时则不会有问题.
+
+6.scrollLeft :
+
+对象的最左边，到对象在当前窗口显示的范围内，的左边的距离．
+
+即是在出现了横向滚动条的情况下，滚动条拉动的距离．
+
+7.scrollTop：
+
+对象的最顶部，到对象在当前窗口显示的范围内，的顶边的距离．
+
+即是在出现了纵向滚动条的情况下，滚动条拉动的距离．
+
+8.scrollHeight：
+滚动条的高度
+
+9.scrollWidth：
+
+滚动条的宽度
+
+10.clientLeft：
+
+左侧边框的大小，即(offsetWidth-clientWidth)/2
+
+11.clientTop：
+
+12.clientWidth： <width+左右padding>
+
+13.clientHeight：
+
+大家对 clientHeight 都没有什么异议，都认为是内容可视区域的高度，也就是说页面浏览器中可以看到内容的这个区域的高度，一般是最后一个工具条以下到状态栏以上的这个区域，与页面内容无关。
+
+
+
+二、offset操作
+1、offsetParent:  元素的定位祖先元素，如果没有则为body;     (IE6~IE7有所区别：haslayout、html有关)
+2、offsetLeft、offsetTop: 元素的边框到定位祖先元素的距离
+3、offsetWidth:可肉眼看到元素的宽度
+4、clientWidth: offsetWidth减去边框的大小
+5、getBoundingClientRect().top ：元素到可视范围的距离
+6、掌握获取元素到浏览器边框的距离：制作成函数，方便后期使用
+
+三、scroll操作 （低版本浏览器没有滚动）
+1、body滚动距离：
+
+window.pageYOffset：    【获取】     <!低版本IE不支持>
+document.documentElement.scrollTop:     【设置+获取】  chrome不支持(其他浏览器的方法) 
+document.body.scrollTop                 【设置+获取】chrome支持(其他浏览器支持) 
+2、元素的滚动距离：
+   元素.scrolltop
+3、滚动条的宽度、高度：
+  scrollWidth、scrollHeight
+```
 
 
 
