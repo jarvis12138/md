@@ -51,16 +51,16 @@ var undefined = 8;
 方式一的效率明显最低，方式二和方式三应该差不多。将window作为参数传递进去就可以让代码里面的语句可以直接用参数中的window，而不用再去找最外层的对象。假如要在函数中为window再设置 100000个属性，用参数传递过去只需要找一次最外层对象。不用参数传递，用到window的语句都要去找一次最外层对象。
 
 
-[isEmptyObject](https://github.com/jarvis12138/md/blob/master/md/jQuery.v1.6.js#L532)
+[isEmptyObject](https://github.com/jarvis12138/md/blob/master/jQuery.v1.6.js#L532)
 
-[inArray](https://github.com/jarvis12138/md/blob/master/md/jQuery.v1.6.js#L687)
+[inArray](https://github.com/jarvis12138/md/blob/master/jQuery.v1.6.js#L687)
 
-[style](https://github.com/jarvis12138/md/blob/master/md/jQuery.v1.6.js#L6208)
+[style](https://github.com/jarvis12138/md/blob/master/jQuery.v1.6.js#L6208)
 
-[css](https://github.com/jarvis12138/md/blob/master/md/jQuery.v1.6.js#L6259)
+[css](https://github.com/jarvis12138/md/blob/master/jQuery.v1.6.js#L6259)
 
 ### addClass、removeClass、toggleClass
-[addClass](https://github.com/jarvis12138/md/blob/master/md/jQuery.v1.6.js#L1911)
+[addClass](https://github.com/jarvis12138/md/blob/master/jQuery.v1.6.js#L1911)
 ```js
 
 addClass: function( value ) {
@@ -110,7 +110,7 @@ trimLeft = /^\s+/,
 trimRight = /\s+$/,
 text.toString().replace( trimLeft, "" ).replace( trimRight, "" );
 ```
-在代码[第47行](https://github.com/jarvis12138/md/blob/master/md/jQuery.v1.6.js#47)和[第652行](https://github.com/jarvis12138/md/blob/master/md/jQuery.v1.6.js#L652)
+在代码[第47行](https://github.com/jarvis12138/md/blob/master/jQuery.v1.6.js#47)和[第652行](https://github.com/jarvis12138/md/blob/master/jQuery.v1.6.js#L652)
 但服务端某个配置文件编码是 UTF-8 + BOM
 ```js
 <script>
@@ -122,7 +122,7 @@ try {
 }
 </script>
 ```
-[在第889行](https://github.com/jarvis12138/md/blob/master/md/jQuery.v1.6.js#L889)
+[在第889行](https://github.com/jarvis12138/md/blob/master/jQuery.v1.6.js#L889)
 添加了
 ```js
 trimLeft = /^[\s\xA0]+/;
@@ -175,7 +175,7 @@ offsetLeft 指的是一个元素最近的父级定位元素，如果没有定位
 ```
 
 ### 获取滚动条高度
-[在第8765行](https://github.com/jarvis12138/md/blob/master/md/jQuery.v1.6.js#8765)
+[在第8765行](https://github.com/jarvis12138/md/blob/master/jQuery.v1.6.js#8765)
 ```js
  win ? ("pageXOffset" in win) ? win[ i ? "pageYOffset" : "pageXOffset" ] :
                     jQuery.support.boxModel && win.document.documentElement[ method ] ||
