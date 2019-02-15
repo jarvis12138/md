@@ -6,6 +6,8 @@
 
 ### [ 防抖与节流 ](#防抖与节流)
 
+### [ 前端性能优化 ](#前端性能优化)
+
 ### [ 大厂面试 ](#大厂面试)
 
 
@@ -40,6 +42,12 @@
 
 [节流](https://github.com/mqyqingfeng/Blog/issues/26)
 
+
+### 前端性能优化
+
+[https://juejin.im/post/5c60ed6cf265da2dd4274724](https://juejin.im/post/5c60ed6cf265da2dd4274724)
+
+[大公司里怎样开发和部署前端代码](https://www.zhihu.com/question/20790576/answer/32602154)
 
 
 ### 大厂面试
