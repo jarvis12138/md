@@ -2,11 +2,11 @@
 
 ### [ 面向对象的程序设计 ](#面向对象的程序设计)
 
-### [ 大厂面试 ](#大厂面试)
-
 ### [ 柯里化 ](#柯里化)
 
 ### [ 防抖与节流 ](#防抖与节流)
+
+### [ 大厂面试 ](#大厂面试)
 
 
 ```
@@ -24,14 +24,9 @@
 
 ### 面向对象的程序设计
 
-《JavaScript高级程序设计》第六章 面向对象的程序设计
+《JavaScript高级程序设计》第六章 面向对象的程序设计   **重点**
 
 深入JavaScript系列 博客园 汤姆大叔   [https://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html](https://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html)
-
-
-### 大厂面试
-
-头条面试一、二、三   [https://www.cnblogs.com/QH-Jimmy/p/9986775.html](https://www.cnblogs.com/QH-Jimmy/p/9986775.html) [https://www.cnblogs.com/QH-Jimmy/p/9986821.html](https://www.cnblogs.com/QH-Jimmy/p/9986821.html) [https://www.cnblogs.com/QH-Jimmy/p/10004060.html](https://www.cnblogs.com/QH-Jimmy/p/10004060.html)
 
 
 ### 柯里化
@@ -45,6 +40,15 @@
 
 [节流](https://github.com/mqyqingfeng/Blog/issues/26)
 
+
+
+### 大厂面试
+
+头条面试一、二、三   [https://www.cnblogs.com/QH-Jimmy/p/9986775.html](https://www.cnblogs.com/QH-Jimmy/p/9986775.html) [https://www.cnblogs.com/QH-Jimmy/p/9986821.html](https://www.cnblogs.com/QH-Jimmy/p/9986821.html) [https://www.cnblogs.com/QH-Jimmy/p/10004060.html](https://www.cnblogs.com/QH-Jimmy/p/10004060.html)
+
+[前端面试汇总1](https://juejin.im/post/5c62b92de51d457fd77b22ce)
+
+[前端面试汇总2](https://juejin.im/post/5c64d15d6fb9a049d37f9c20)
 
 
 
