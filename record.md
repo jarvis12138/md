@@ -6,6 +6,8 @@
 
 ### [ 防抖与节流 ](#防抖与节流)
 
+### [ Vue.js 技术揭秘 ](#Vuejs技术揭秘)
+
 ### [ 前端性能优化 ](#前端性能优化)
 
 ### [ 大厂面试 ](#大厂面试)
@@ -41,6 +43,13 @@
 [防抖](https://github.com/mqyqingfeng/Blog/issues/22)
 
 [节流](https://github.com/mqyqingfeng/Blog/issues/26)
+
+
+### Vuejs技术揭秘
+
+[https://ustbhuangyi.github.io/vue-analysis/components/lifecycle.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F](https://ustbhuangyi.github.io/vue-analysis/components/lifecycle.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F)
+
+[http://hcysun.me/vue-design/art/3vue-example.html](http://hcysun.me/vue-design/art/3vue-example.html)
 
 
 ### 前端性能优化
