@@ -159,6 +159,17 @@ function fn(n){
 console.log(fn('205402002103'));
 ```
 
+[一次弄懂Event Loop（彻底解决此类面试问题）](https://zhuanlan.zhihu.com/p/55511602)
+[一次弄懂Event Loop（彻底解决此类面试问题）](https://juejin.im/post/5c3d8956e51d4511dc72c200?utm_source=gold_browser_extension)
+
+
+
+
+
+
+
+
+
 
 
 
