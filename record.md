@@ -20,6 +20,8 @@
 
 ### [ 大厂面试 ](#大厂面试)
 
+### [ 面试题 ](#面试题)
+
 
 ```
 格式： [最新一期](/content/34/HelloGitHub34.md)
@@ -93,9 +95,69 @@
 [【面经】寒冬中的一年半前端跳槽](https://zhuanlan.zhihu.com/p/54397576)
 
 
+### 面试题
 
+考察闭包：
 
+```javascript
+var x = 20;
+var a = {
+    x : 15,
+    fn : function(){
+        var x = 30;
+        return function(){
+            return this.x;
+        };
+    }
+};
+console.log(a.fn());
+console.log((a.fn())());
+console.log(a.fn()());
+console.log(a.fn()() == (a.fn())());
+console.log(a.fn().call(this));
+console.log(a.fn().call(a));
+```
 
+数组去重：
+
+```javascript
+var arr = ['a','g','q','d','a','e','q'];
+Array.prototype.unique = function(){
+    for(var i = 0; i < this.length; i++){
+        for(var j = i+1; j < this.length; j++){
+            if(this[i] == this[j]){
+                this.splice(j,1);
+            }
+        }
+    }
+    return this;
+};
+console.log(arr.unique());
+```
+
+编写一个函数fn(Number n),将数字转为大写输出，如输入123，输出一百二十三。
+
+```javascript
+function fn(n){
+    if(!/^([1-9]\d*)/.test(n)){
+        return '非法数据';
+    }
+    var unit = '千百十亿千百十万千百十个';
+    if(n.length > unit.length){
+        return '数据过长';
+    }
+    var newStr = '';
+    var nlength = n.length;
+    unit = unit.substr(unit.length - nlength);
+    for(var i = 0; i < nlength; i++){
+        newStr += '零一二三四五六七八九'.charAt(n[i]) + unit.charAt(i);
+    }
+    newStr = newStr.substr(0,newStr.length-1);
+    newStr = newStr.replace(/零(千|百|十)/g,'零').replace(/(零)+/g,'零').replace(/零(亿|万)/g,'$1');
+    return newStr;
+}
+console.log(fn('205402002103'));
+```
 
 
 
