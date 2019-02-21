@@ -120,6 +120,8 @@ console.log(a.fn().call(a));
 
 数组去重：
 
+[数组去重](https://github.com/mqyqingfeng/Blog/issues/27)
+
 ```javascript
 var arr = ['a','g','q','d','a','e','q'];
 Array.prototype.unique = function(){
