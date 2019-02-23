@@ -22,6 +22,8 @@
 
 ### [ 面试题 ](#面试题)
 
+### [ 图书 ](#图书)
+
 
 ```
 格式： [最新一期](/content/34/HelloGitHub34.md)
@@ -165,8 +167,9 @@ console.log(fn('205402002103'));
 [一次弄懂Event Loop（彻底解决此类面试问题）](https://juejin.im/post/5c3d8956e51d4511dc72c200?utm_source=gold_browser_extension)
 
 
+### 图书
 
-
+《JavaScript权威指南》、《JavaScript算法与数据结构》、《JavaScript设计模式与开发实践》、《你不知道的JavaScript》、《HTTP权威指南》
 
 
 
