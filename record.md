@@ -118,6 +118,16 @@ console.log(a.fn()());
 console.log(a.fn()() == (a.fn())());
 console.log(a.fn().call(this));
 console.log(a.fn().call(a));
+
+var x = 20;
+var a = {
+    x : 15,
+    fn : function(){
+        var x = 30;
+        return this.x;
+    }
+};
+console.log(a.fn());
 ```
 
 数组去重：
