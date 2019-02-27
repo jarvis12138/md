@@ -627,5 +627,65 @@ public class MyFilter implements Filter{
 
 ```
 
+### jpa
+
+```java
+
+public interface Dao extends JpaRepository<BeanClass, Integer> {
+	
+//	public List<BeanClass> findAll();
+	
+//	@Transactional
+//	@Query(value = "select * from user_info  ", nativeQuery = true)
+//	List<BeanClass> findByLastnameOrFirstname();
+	
+
+	@Transactional
+	@Query(value = "select * from user_info u where u.name =?1 or u.age = ?2  ", nativeQuery = true)
+	List<BeanClass> findByLastnameOrFirstname(String name, Integer age);
+
+	@Transactional
+    @Modifying
+    @Query(value = "update user_info u set u.name=?1 where u.id=?2", nativeQuery = true)
+    void updateUserImg(@Param(value = "name")String name,@Param(value = "id") Integer id);
+
+}
+
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class DaoTest {
+	
+	@Autowired
+	Dao dao;
+
+	@Test
+	public void test() throws Exception{
+//		BeanClass beanClass = new BeanClass();
+//		beanClass.setAge(23);
+//		beanClass.setName("zhang");
+//		
+		System.out.println("================test================");
+		dao.updateUserImg("hahahha", 2);
+//		System.out.println(list);
+		System.out.println("================test================");
+		
+//		dao.findByLastnameOrFirstname(23, "zhagnsna");
+	}
+
+}
+
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
