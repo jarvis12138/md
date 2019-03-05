@@ -677,7 +677,52 @@ public class DaoTest {
 
 ```
 
+### mybatis
 
+```java
+
+@Mapper
+public interface MapperBean {
+
+	@Select("select * from user where id=#{id}")
+	public BeanClass getBeanById(Integer id);
+}
+```
+
+```xml
+
+<dependencies>
+
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-web</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>org.mybatis.spring.boot</groupId>
+		<artifactId>mybatis-spring-boot-starter</artifactId>
+		<version>1.3.0</version>
+	</dependency>
+
+	<dependency>
+		<groupId>tk.mybatis</groupId>
+		<artifactId>mapper-spring-boot-starter</artifactId>
+		<version>2.0.2</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-test</artifactId>
+		<scope>test</scope>
+	</dependency>
+
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<scope>runtime</scope>
+	</dependency>
+
+</dependencies>
+```
 
 
 
