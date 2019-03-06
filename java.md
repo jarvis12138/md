@@ -141,7 +141,34 @@ public String testUser(@RequestBody User user){}
 </dependencies>
 ```
 
+mybatis、sql : 
 
+```xml
+
+<dependency>
+    <groupId>org.mybatis.spring.boot</groupId>
+    <artifactId>mybatis-spring-boot-starter</artifactId>
+    <version>1.3.2</version>
+</dependency>
+<dependency>
+    <groupId>tk.mybatis</groupId>
+    <artifactId>mapper-spring-boot-starter</artifactId>
+    <version>2.0.2</version>
+</dependency>
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+</dependency>
+```
+
+```java
+@Mapper
+public interface BeanClass {
+
+	@Select("select * from user where id=#{id}")
+	public User getBeanById(Integer id);
+}
+```
 
 
 
