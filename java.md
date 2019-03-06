@@ -87,10 +87,10 @@ jpa:
 src/main/resources/application.properties :
 
 ```java
-spring.jpa.hibernate.ddl-auto=create
-spring.datasource.url=jdbc:mysql://localhost:3306/db_example
-spring.datasource.username=springuser
-spring.datasource.password=ThePassword
+spring.datasource.url=jdbc:mysql://127.0.0.1:3306/test?useSSL=false
+spring.datasource.username=root
+spring.datasource.password=123456
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
 ```
 
 @RequestMapping : 
@@ -130,6 +130,16 @@ public String sayHello(@RequestParam(value="id",required = false,defaultValue = 
 public String testUser(@RequestBody User user){}
 ```
 
+热部署: 
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-devtools</artifactId>
+    </dependency>
+</dependencies>
+```
 
 
 
