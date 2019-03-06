@@ -93,6 +93,42 @@ spring.datasource.username=springuser
 spring.datasource.password=ThePassword
 ```
 
+@RequestMapping : 
+
+```java
+// 处理url:
+@RequestMapping("/home")
+// 处理多个url：
+@RequestMapping(value = {"", "/page*", "view/*", "**/msg"}
+// 处理http请求
+@RequestMapping(method = RequestMethod.GET)
+// 处理生产和消费对象
+@RequestMapping(value = "/prod", produces = {"application/JSON"})
+@RequestMapping(value = "/cons", consumes = {"application/JSON", "application/XML"})
+// 处理消息头
+@RequestMapping(value = "/head", headers = {"content-type=text/plain"})
+// 处理请求参数
+@RequestMapping(value = "/fetch", params = {"personId=10"})
+// 处理动态 URI
+@RequestMapping(value = "/fetch/{id}", method = RequestMethod.GET)
+@RequestMapping(value = "/fetch/{id:[a-z]+}/{name}", method = RequestMethod.GET)
+
+
+
+// @PathVaribale 获取url中的数据
+@RequestMapping(value="/hello/{id}",method= RequestMethod.GET)
+public String sayHello(@PathVariable("id") Integer id){}
+// @RequestParam 获取请求参数的值
+// localhost:8080/hello?id=98
+@RequestMapping(value="/hello",method= RequestMethod.GET)
+public String sayHello(@RequestParam("id") Integer id){}
+// required=false 表示url中可以不穿入id参数，此时就使用默认参数
+@RequestMapping(value="/hello",method= RequestMethod.GET)
+public String sayHello(@RequestParam(value="id",required = false,defaultValue = "1") Integer id){}
+// @RequestBody能把简单json结构参数转换成实体类
+@RequestMapping(value = "/testUser", method = RequestMethod.POST)
+public String testUser(@RequestBody User user){}
+```
 
 
 
