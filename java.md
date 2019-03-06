@@ -170,6 +170,32 @@ public interface BeanClass {
 }
 ```
 
+```java
+// 插入：（数据库 表id一定要设置AI(Auto Incr)(自增)）
+@Insert("INSERT INTO user(username,password,age) VALUES( #{username}, #{password}, #{age})")
+@Options(useGeneratedKeys=true, keyProperty="id") // 插入keyProperty=“id”，getId就不会为null
+public void insert(User user) ;
+
+
+User user = new User();
+// user.setId(6);
+user.setAge(10);
+user.setUsername("haha");
+user.setPassword("333333");
+mapperBean.insert(user);
+System.out.println(user.getId());
+```
+
+```java
+// update
+@Update("Update user set username=#{username}, password=#{password}, age=#{age} where id=#{id}")
+```
+
+```java
+// delete
+@Delete("delete from user where id=#{id}")
+```
+
 
 
 
