@@ -196,6 +196,49 @@ System.out.println(user.getId());
 @Delete("delete from user where id=#{id}")
 ```
 
+index.html
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script
+  src="http://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<script type="text/javascript">
+	$(function(){
+		$.ajax({
+			method: "GET",
+			url: "http://localhost:8080/login",
+			data: 
+				{
+					"name": "zhansan",
+					"age": "12"
+				}
+			,
+			ContentType: "application/json",
+			// dataType: "json",
+			success: function(res){
+				console.log(res);
+			},
+			error: function(error){
+				console.log(error);
+			}
+		})
+	});
+</script>
+
+</body>
+</html>
+```
 
 
 
