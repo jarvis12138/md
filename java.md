@@ -240,6 +240,16 @@ index.html
 </html>
 ```
 
+分页插件 : 
+
+```xml
+<dependency>
+    <groupId>com.github.pagehelper</groupId>
+    <artifactId>pagehelper-spring-boot-starter</artifactId>
+    <version>1.2.5</version>
+</dependency>
+```
+
 
 
 
