@@ -250,6 +250,21 @@ index.html
 </dependency>
 ```
 
+```java
+// PageHelper 使用非常简单，只需要设置页码和每页显示笔数即可
+PageHelper.startPage(2, 2);
+
+// 设置分页查询条件
+// Example example = new Example(User.class);
+PageInfo<User> pageInfo = new PageInfo<>(mapperBean.findAll());
+
+// 获取查询结果
+List<User> tbUsers = pageInfo.getList();
+for (User tbUser : tbUsers) {
+	System.out.println(tbUser.getUsername());
+}
+```
+
 
 
 
