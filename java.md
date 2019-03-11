@@ -265,8 +265,20 @@ for (User tbUser : tbUsers) {
 }
 ```
 
+alibaba > fastjson : 
 
+```xml
+<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+<dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>fastjson</artifactId>
+    <version>1.2.47</version>
+</dependency>
+```
 
+```javascript
+// JSONObject json = new JSONObject();
+```
 
 
 
