@@ -349,6 +349,78 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
 }
 ```
 
+拦截器 自定义注解式
+
+```java
+
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Target({ElementType.METHOD, ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface RequireSignature {
+	
+	String key();
+	
+	boolean lock() default false;
+}
+```
+
+```java
+
+import java.lang.reflect.Method;
+import java.util.Objects;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.annotation.AnnotatedElementUtils;
+import org.springframework.stereotype.Component;
+import org.springframework.web.method.HandlerMethod;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
+
+@Component
+public class ExternalServiceInterceptor extends HandlerInterceptorAdapter {
+	
+	@Override
+	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
+			throws Exception {
+
+		Method method = ((HandlerMethod) handler).getMethod();
+		RequireSignature requireSignature = method.getAnnotation(RequireSignature.class);
+
+		System.out.println(requireSignature);
+
+		return super.preHandle(request, response, handler);
+	}
+}
+```
+
+```java
+public class WebConfiguration extends WebMvcConfigurerAdapter { }
+```
+
+```java
+@RequireSignature(key="test")
+@RequestMapping("/hi")
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
