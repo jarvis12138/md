@@ -26,6 +26,8 @@
 
 ### [ 图书 ](#图书)
 
+### [ 图片压缩 ](#图片压缩)
+
 
 ```
 格式： [最新一期](/content/34/HelloGitHub34.md)
@@ -190,6 +192,15 @@ console.log(fn('205402002103'));
 
 《JavaScript权威指南》、《JavaScript算法与数据结构》、《JavaScript设计模式与开发实践》、《你不知道的JavaScript》、《HTTP权威指南》
 
+### 图片压缩
+
+[https://github.com/think2011/localResizeIMG](https://github.com/think2011/localResizeIMG)
+
+[https://github.com/stomita/ios-imagefile-megapixel/blob/master/src/megapix-image.js](https://github.com/stomita/ios-imagefile-megapixel/blob/master/src/megapix-image.js)
+
+[https://www.zhihu.com/question/30692677](https://www.zhihu.com/question/30692677)
+
+[https://www.zhangxinxu.com/wordpress/2017/07/html5-canvas-image-compress-upload/](https://www.zhangxinxu.com/wordpress/2017/07/html5-canvas-image-compress-upload/)
 
 
 
