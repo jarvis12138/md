@@ -202,7 +202,37 @@ console.log(fn('205402002103'));
 
 [https://www.zhangxinxu.com/wordpress/2017/07/html5-canvas-image-compress-upload/](https://www.zhangxinxu.com/wordpress/2017/07/html5-canvas-image-compress-upload/)
 
+nginx html 文件 304 缓存问题：
 
+[https://github.com/ant-design/ant-design-pro/issues/1365](https://github.com/ant-design/ant-design-pro/issues/1365)
+
+```
+# 前端静态文件
+location ~* \.(gif|jpg|jpeg|png|css|js|ico|eot|otf|fon|font|ttf|ttc|woff|woff2)$ {
+    root /var/www/example-fe/dist/;
+}
+
+# 前端html文件
+location / {
+    # disable cache html
+    add_header Cache-Control 'no-cache, must-revalidate, proxy-revalidate, max-age=0';
+
+    root /var/www/example-fe/dist/;
+    index index.html index.htm;
+    try_files $uri /index.html;
+}
+```
+
+由于浏览器缓存静态文件的时间不可控，我们可以在nginx上自己配置expires 1M（1个月）
+
+```
+# 前端静态文件
+location ~* \.(gif|jpg|jpeg|png|css|js|ico|eot|otf|fon|font|ttf|ttc|woff|woff2)$ {
+    root /var/www/example-fe/dist/;
+    expires 1M;
+    add_header Cache-Control "public";
+}
+```
 
 
 
