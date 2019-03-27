@@ -28,6 +28,8 @@
 
 ### [ 图片压缩 ](#图片压缩)
 
+### [ 从输入URL到页面加载发生了什么 ](#从输入URL到页面加载发生了什么)
+
 
 ```
 格式： [最新一期](/content/34/HelloGitHub34.md)
@@ -235,6 +237,20 @@ location ~* \.(gif|jpg|jpeg|png|css|js|ico|eot|otf|fon|font|ttf|ttc|woff|woff2)$
     add_header Cache-Control "public";
 }
 ```
+
+### 从输入URL到页面加载发生了什么
+
+[https://segmentfault.com/a/1190000006879700](https://segmentfault.com/a/1190000006879700)
+
+[https://www.zhihu.com/question/34873227/answer/518086565](https://www.zhihu.com/question/34873227/answer/518086565)
+
+
+
+
+
+
+
+
 
 
 
