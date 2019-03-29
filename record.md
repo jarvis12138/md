@@ -30,6 +30,8 @@
 
 ### [ 从输入URL到页面加载发生了什么 ](#从输入URL到页面加载发生了什么)
 
+### [ 深入浅出Webpack ](#深入浅出Webpack)
+
 
 ```
 格式： [最新一期](/content/34/HelloGitHub34.md)
@@ -244,6 +246,9 @@ location ~* \.(gif|jpg|jpeg|png|css|js|ico|eot|otf|fon|font|ttf|ttc|woff|woff2)$
 
 [https://www.zhihu.com/question/34873227/answer/518086565](https://www.zhihu.com/question/34873227/answer/518086565)
 
+### 深入浅出Webpack
+
+[http://webpack.wuhaolin.cn/](http://webpack.wuhaolin.cn/)
 
 
 
