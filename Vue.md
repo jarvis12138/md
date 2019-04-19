@@ -1591,6 +1591,44 @@ export default {
 </style>
 ```
 
+toast 
+
+```js
+
+import Vue from 'vue'
+import ToastComponent from './toast.vue'
+
+const ToastConstructor = Vue.extend(ToastComponent);
+
+let i = 1;
+let instance ;
+
+const Toast = (msg) => {
+	instance = new ToastConstructor({
+		data: {
+			msg: msg
+			// show: true
+		}
+	});
+	instance.vm = instance.$mount();
+	instance.dom = instance.vm.$el;
+	document.getElementsByTagName('body')[0].appendChild(instance.dom);
+	instance.dom.style.zIndex = i + 10000;
+	setTimeout(() => {
+		instance.dom.className = instance.dom.className + ' vue-toast-show';
+	}, 0);
+		
+	i++;
+
+	return instance.vm;
+}
+
+export default {
+	install: Vue => {
+		Vue.prototype.$toast = Toast;
+	}
+}
+```
 
 
 
