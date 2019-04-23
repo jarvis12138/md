@@ -1630,6 +1630,73 @@ export default {
 }
 ```
 
+```html
+
+<template>
+	<!-- <div> -->
+		<div :class="{'vue-toast-show': show, 'vue-toast-close': !show}" class="vue-toast">
+			{{msg}}
+		</div>
+	<!-- </div> -->
+</template>
+
+<script>
+
+export default {
+	name: 'toast',
+	data(){
+		return {
+			show: false
+		}
+	},
+	methods: {
+
+	},
+	created(){
+		let that = this;
+		// document.body.appendChild(that.$el);
+		setTimeout(() => {
+			that.show = false;
+			that.$el.parentNode.removeChild(that.$el);
+		}, 2000);
+	}
+}
+</script>
+
+<style scoped>
+	.vue-toast{
+		position: fixed;
+		bottom: 0;
+		left: 50%;
+		font-size: 12px;
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		transform: translateX(-50%);
+		opacity: 0;
+		background-color: #000;
+		border-radius: 4px;
+		color: #fff;
+		padding: 8px 10px;
+		max-width: 80%;
+
+		-webkit-transition: all 0.2s cubic-bezier(.22,1.43,1,1.09);
+		-o-transition: all 0.2s cubic-bezier(.22,1.43,1,1.09);
+		-ms-transition: all 0.2s cubic-bezier(.22,1.43,1,1.09);
+		-moz-transition: all 0.2s cubic-bezier(.22,1.43,1,1.09);
+		transition: all 0.2s cubic-bezier(.22,1.43,1,1.09);
+	}
+	.vue-toast-show{
+		bottom: 60px!important;
+		opacity: 0.6!important;
+	}
+	.vue-toast-close{
+		opacity: 0;
+		bottom: 0;
+	}
+</style>
+```
 
 
 
