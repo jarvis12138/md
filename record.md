@@ -34,6 +34,8 @@
 
 ### [ jquery源码 ](#jquery源码)
 
+### [ markdown-it ](#markdown-it)
+
 
 ```
 格式： [最新一期](/content/34/HelloGitHub34.md)
@@ -260,10 +262,12 @@ location ~* \.(gif|jpg|jpeg|png|css|js|ico|eot|otf|fon|font|ttf|ttc|woff|woff2)$
 
 [css 源码](http://www.webfront-js.com/articaldetail/13.html)
 
+### markdown-it
 
+[使用 markdown-it 解析 markdown 代码（读 vuepress 三）
+](https://zhuanlan.zhihu.com/p/46355549)
 
-
-
+[谈谈 Element 文档中的 Markdown 解析](https://zhuanlan.zhihu.com/p/65174076)
 
 
 
