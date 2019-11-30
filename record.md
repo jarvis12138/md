@@ -10,6 +10,8 @@
 
 ### [ 懒加载瀑布流 ](#懒加载瀑布流)
 
+### [ promise ](#promise)
+
 ### [ Flex布局教程阮一峰 ](#Flex布局教程阮一峰)
 
 ### [ Vue.js 技术揭秘 ](#Vuejs技术揭秘)
@@ -71,6 +73,15 @@
 
 ### 懒加载瀑布流
 
+### promise
+
+[剖析Promise内部结构](https://github.com/xieranmaya/blog/issues/3)   [知乎地址](https://zhuanlan.zhihu.com/p/21834559)
+
+[Q解析](https://div.io/topic/1351)   [Q解析](https://juejin.im/entry/599968f6518825244630f809)
+
+[https://promisesaplus.com/](https://promisesaplus.com/)   [https://www.promisejs.org/implementing/](https://www.promisejs.org/implementing/)
+
+[Promise 对象-阮一峰](http://es6.ruanyifeng.com/#docs/promise)
 
 ### Flex布局教程阮一峰
 
